@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiago — Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ─────────────── HERO ─────────────── -->
+    <section id="hero" class="section section--hero">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="navbar__links">
+          <li><a href="#work" class="navbar__link nav-scroll">Work</a></li>
+          <li><a href="#service" class="navbar__link nav-scroll">Service</a></li>
+          <li><a href="#testimonial" class="navbar__link nav-scroll">Testimonial</a></li>
+          <li>
+            <a href="#contact" class="navbar__link navbar__contact nav-scroll">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hero headline -->
+      <div class="hero__text">
+        <p class="hero__line">
+          <span class="hero__dim">Hi, I'm </span><span class="hero__bright">Thiago </span>
+        </p>
+        <p class="hero__line">
+          <span class="hero__bright">Full Stack Developer </span><span class="hero__dim">Based in Brazil</span>
+        </p>
+      </div>
+
+      <!-- CTA button -->
+      <a href="#contact" class="btn btn--red hero__cta nav-scroll">Hire Me</a>
+    </section>
+
+    <!-- ─────────────── SERVICES ─────────────── -->
+    <section id="service" class="section section--services">
+      <h2 class="heading heading--services">Services</h2>
+
+      <div class="services__grid">
+        <!-- Top-left -->
+        <article class="service-card">
+          <h3 class="service-card__title service-card__title--44">AI &amp; Intelligent Automation</h3>
+          <p class="service-card__text">
+            Designing AI-driven <span class="text-accent">solutions</span> and intelligent workflows that
+            <span class="text-accent-bright">optimize</span> operations,
+            <span class="text-accent">reduce</span> manual effort, and
+            <span class="text-accent">improve</span> decision-making.
+          </p>
+        </article>
+
+        <!-- Top-right -->
+        <article class="service-card">
+          <h3 class="service-card__title service-card__title--48">Web Design</h3>
+          <p class="service-card__text">
+            Building responsive, <span class="text-accent-bright">high-performance</span> web applications with
+            <span class="text-accent-bright">clean</span> architecture, modern technologies, and a strong focus on
+            <span class="text-accent-bright">usability</span>.
+          </p>
+        </article>
+
+        <!-- Bottom-left -->
+        <article class="service-card">
+          <h3 class="service-card__title service-card__title--44">Process Automation</h3>
+          <p class="service-card__text">
+            Developing <span class="text-accent-bright">automated</span> processes and digital workflows that increase
+            <span class="text-accent-bright">efficiency</span>, ensure consistency, and support business
+            <span class="text-accent-bright">scalability</span>.
+          </p>
+        </article>
+
+        <!-- Bottom-right -->
+        <article class="service-card">
+          <h3 class="service-card__title service-card__title--44">Systems Integration</h3>
+          <p class="service-card__text">
+            <span class="text-accent-bright">Integrating</span> platforms, databases, and third-party services to
+            create connected, reliable, and <span class="text-accent-bright">efficient</span> digital ecosystems.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─────────────── STACK ─────────────── -->
+    <section id="stack" class="section section--stack">
+      <h2 class="heading heading--stack">Stack</h2>
+
+      <div class="stack__marquee-wrapper">
+        <div class="stack__marquee" id="stackMarquee">
+          <!-- Cards injected by main.ts -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── PROJECTS ─────────────── -->
+    <section id="work" class="section section--projects">
+      <h2 class="heading heading--projects">Projects</h2>
+      <a href="#" class="btn btn--outline projects__view-all">View All</a>
+
+      <!-- Left project card -->
+      <div class="project-card project-card--left">
+        <img
+          src="https://www.figma.com/api/mcp/asset/8e77acba-6bc0-435e-ab33-263d6bcabddb"
+          alt="Project screenshot"
+          class="project-card__img"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Right project card -->
+      <div class="project-card project-card--right">
+        <img
+          src="https://www.figma.com/api/mcp/asset/442c99ae-f6fd-4ee7-81d6-9a9cfca87cc1"
+          alt="Project screenshot"
+          class="project-card__img"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Labels -->
+      <span class="project-label project-label--left-title">Project</span>
+      <span class="project-label project-label--right-title">Project</span>
+      <span class="project-label project-label--left-sub">Mobile App</span>
+      <span class="project-label project-label--right-sub">Mobile App</span>
+    </section>
+
+    <!-- ─────────────── ABOUT ME ─────────────── -->
+    <section id="about" class="section section--about">
+      <h2 class="heading heading--about">About Me</h2>
+
+      <div class="about__card">
+        <p class="about__bio about__bio--p1">
+          I'm a <span class="text-bright">Full Stack</span> Developer with experience building
+          <span class="text-dark">web</span> and <span class="text-bright">mobile</span> applications,
+          <span class="text-bright">automations</span>, and system <span class="text-bright">integrations</span>.
+          I work across the full development cycle, from creating new features to maintaining and improving existing
+          systems, <span class="text-bright">always</span> focusing on performance, scalability, and clean architecture.
+        </p>
+        <p class="about__bio about__bio--p2">
+          <span class="text-bright">My</span> background <span class="text-bright">includes</span> working with React,
+          TypeScript, JavaScript, HTML, CSS, PHP, Python, C#, .NET, Node.js, PostgreSQL, MySQL, and Docker. I also have
+          <span class="text-bright">experience</span> integrating APIs and third-party services, writing
+          <span class="text-bright">maintainable</span> code, testing applications, and collaborating closely with
+          design, product, and QA teams to deliver reliable and
+          <span class="text-dark">user-focused solutions</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─────────────── CTA ─────────────── -->
+    <section id="contact" class="section section--cta">
+      <h2 class="cta__heading">Let's create<br />something together</h2>
+      <a href="#" class="btn btn--red cta__btn">Book a Call</a>
+    </section>
+
+    <!-- ─────────────── FOOTER ─────────────── -->
+    <footer id="footer" class="footer">
+      <div class="footer__socials">
+        <a href="#" class="footer__link">Instagram</a>
+        <a href="#" class="footer__link">GitHub</a>
+        <a href="#" class="footer__link">WhatsApp</a>
+      </div>
+      <hr class="footer__line" />
+    </footer>
+
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>
