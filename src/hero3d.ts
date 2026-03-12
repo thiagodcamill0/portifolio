@@ -15,7 +15,7 @@ export function initHero3D(container: HTMLElement): void {
   const scene = new THREE.Scene()
 
   const camera = new THREE.PerspectiveCamera(60, w / h, 0.1, 2000)
-  camera.position.set(0, 0, 75)
+  camera.position.set(0, 0, 110)
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' })
   renderer.setClearColor(0x000000, 1)
@@ -111,6 +111,10 @@ export function initHero3D(container: HTMLElement): void {
 
     mesh.instanceMatrix.needsUpdate = true
     mesh.instanceColor!.needsUpdate = true
+
+    // Diagonal auto-rotation (X and Y axes simultaneously)
+    mesh.rotation.y = time * 0.12
+    mesh.rotation.x = time * 0.07
 
     composer.render()
   }
