@@ -21,18 +21,24 @@
         </ul>
       </nav>
 
-      <!-- Hero headline -->
-      <div class="hero__text">
-        <p class="hero__line">
-          <span class="hero__dim">Hi, I'm </span><span class="hero__bright">Thiago </span>
-        </p>
-        <p class="hero__line">
-          <span class="hero__bright">Full Stack Developer </span><span class="hero__dim">Based in Brazil</span>
-        </p>
-      </div>
+      <!-- Hero body: text left, 3D right -->
+      <div class="hero__body">
+        <div class="hero__text">
+          <p class="hero__line">
+            <span class="hero__dim">Hi, I'm </span><span class="hero__bright">Thiago </span>
+          </p>
+          <p class="hero__line">
+            <span class="hero__bright">Full Stack Developer</span>
+          </p>
+          <p class="hero__line">
+            <span class="hero__dim">Based in Brazil</span>
+          </p>
+          <a href="#contact" class="btn btn--red hero__cta nav-scroll">Hire Me</a>
+        </div>
 
-      <!-- CTA button -->
-      <a href="#contact" class="btn btn--red hero__cta nav-scroll">Hire Me</a>
+        <!-- 3D particle swarm -->
+        <div id="hero3d" class="hero__3d"></div>
+      </div>
     </section>
 
     <!-- ─────────────── SERVICES ─────────────── -->
@@ -95,34 +101,68 @@
 
     <!-- ─────────────── PROJECTS ─────────────── -->
     <section id="work" class="section section--projects">
-      <h2 class="heading heading--projects">Projects</h2>
-      <a href="#" class="btn btn--outline projects__view-all">View All</a>
-
-      <!-- Left project card -->
-      <div class="project-card project-card--left">
-        <img
-          src="https://www.figma.com/api/mcp/asset/8e77acba-6bc0-435e-ab33-263d6bcabddb"
-          alt="Project screenshot"
-          class="project-card__img"
-          loading="lazy"
-        />
+      <div class="projects__header">
+        <h2 class="heading heading--projects">Projects</h2>
+        <a href="#" class="btn btn--outline projects__view-all">View All</a>
       </div>
 
-      <!-- Right project card -->
-      <div class="project-card project-card--right">
-        <img
-          src="https://www.figma.com/api/mcp/asset/442c99ae-f6fd-4ee7-81d6-9a9cfca87cc1"
-          alt="Project screenshot"
-          class="project-card__img"
-          loading="lazy"
-        />
-      </div>
+      <div class="projects__grid">
+        <!-- Left project -->
+        <div class="project-item">
+          <div class="project-card">
+            <img
+              src="https://www.figma.com/api/mcp/asset/8e77acba-6bc0-435e-ab33-263d6bcabddb"
+              alt="Project screenshot"
+              class="project-card__img"
+              loading="lazy"
+            />
+          </div>
+          <span class="project-label project-label--title">Project</span>
+          <span class="project-label project-label--sub">Mobile App</span>
+        </div>
 
-      <!-- Labels -->
-      <span class="project-label project-label--left-title">Project</span>
-      <span class="project-label project-label--right-title">Project</span>
-      <span class="project-label project-label--left-sub">Mobile App</span>
-      <span class="project-label project-label--right-sub">Mobile App</span>
+        <!-- Right project -->
+        <div class="project-item">
+          <div class="project-card">
+            <img
+              src="https://www.figma.com/api/mcp/asset/442c99ae-f6fd-4ee7-81d6-9a9cfca87cc1"
+              alt="Project screenshot"
+              class="project-card__img"
+              loading="lazy"
+            />
+          </div>
+          <span class="project-label project-label--title">Project</span>
+          <span class="project-label project-label--sub">Mobile App</span>
+        </div>
+
+        <!-- Third project -->
+        <div class="project-item">
+          <div class="project-card">
+            <img
+              src="https://www.figma.com/api/mcp/asset/8e77acba-6bc0-435e-ab33-263d6bcabddb"
+              alt="Project screenshot"
+              class="project-card__img"
+              loading="lazy"
+            />
+          </div>
+          <span class="project-label project-label--title">Project</span>
+          <span class="project-label project-label--sub">Web App</span>
+        </div>
+
+        <!-- Fourth project -->
+        <div class="project-item">
+          <div class="project-card">
+            <img
+              src="https://www.figma.com/api/mcp/asset/442c99ae-f6fd-4ee7-81d6-9a9cfca87cc1"
+              alt="Project screenshot"
+              class="project-card__img"
+              loading="lazy"
+            />
+          </div>
+          <span class="project-label project-label--title">Project</span>
+          <span class="project-label project-label--sub">Web App</span>
+        </div>
+      </div>
     </section>
 
     <!-- ─────────────── ABOUT ME ─────────────── -->

@@ -2,28 +2,50 @@
  * main.ts — Portfolio entry point
  * - Builds the stack marquee dynamically
  * - Smooth scroll for nav links
+ * - Initialises the hero 3D particle swarm
  */
+
+import { initHero3D } from './hero3d'
 
 // ─────────────────────────────────────────────
 // STACK MARQUEE
 // ─────────────────────────────────────────────
 
-const stackTechs: string[] = [
-  'React',
-  'TypeScript',
-  'Node.js',
-  'Python',
-  'PostgreSQL',
-  'Docker',
+const stackTechs: { name: string; icon: string }[] = [
+  { name: 'React',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+  { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+  { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+  { name: 'HTML',       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+  { name: 'CSS',        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+  { name: 'PHP',        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+  { name: 'Python',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+  { name: 'C#',         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg' },
+  { name: '.NET',       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg' },
+  { name: 'Node.js',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+  { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+  { name: 'MySQL',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+  { name: 'Figma',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+  { name: 'Docker',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
 ]
 
 /**
  * Creates a single stack card element.
  */
-function createStackCard(name: string): HTMLDivElement {
+function createStackCard(tech: { name: string; icon: string }): HTMLDivElement {
   const card = document.createElement('div')
   card.className = 'stack-card'
-  card.textContent = name
+
+  const img = document.createElement('img')
+  img.src = tech.icon
+  img.alt = tech.name
+  img.className = 'stack-card__icon'
+
+  const label = document.createElement('span')
+  label.className = 'stack-card__label'
+  label.textContent = tech.name
+
+  card.appendChild(img)
+  card.appendChild(label)
   return card
 }
 
@@ -46,6 +68,7 @@ function buildMarquee(): void {
   allTechs.forEach((tech) => {
     fragment.appendChild(createStackCard(tech))
   })
+
 
   marquee.appendChild(fragment)
 
@@ -80,7 +103,20 @@ function initSmoothScroll(): void {
 // INIT
 // ─────────────────────────────────────────────
 
-document.addEventListener('DOMContentLoaded', () => {
-  buildMarquee()
-  initSmoothScroll()
-})
+buildMarquee()
+initSmoothScroll()
+
+// ─────────────────────────────────────────────
+// HERO 3D
+// ─────────────────────────────────────────────
+const hero3dContainer = document.getElementById('hero3d')
+if (hero3dContainer) {
+  const ro = new ResizeObserver((entries) => {
+    const { width, height } = entries[0].contentRect
+    if (width > 0 && height > 0) {
+      ro.disconnect()
+      initHero3D(hero3dContainer)
+    }
+  })
+  ro.observe(hero3dContainer)
+}
