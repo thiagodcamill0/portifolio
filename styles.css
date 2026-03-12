@@ -250,6 +250,7 @@ ul {
   justify-content: flex-end;
   gap: 16px;
   min-height: 280px;
+  border-radius: 16px;
 }
 
 .service-card__title {
@@ -395,9 +396,10 @@ ul {
 }
 
 .project-card {
+  display: block;
   overflow: hidden;
   background-color: var(--bg-dark-card);
-  height: 360px;
+  height: 460px;
   margin-bottom: 20px;
   border-radius: 16px;
   transition: transform 0.3s ease;
@@ -412,6 +414,10 @@ ul {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.project-card--link .project-card__img {
+  object-position: top center;
 }
 
 .project-label {
