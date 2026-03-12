@@ -208,7 +208,7 @@ ul {
   display: flex;
   align-items: stretch;
   padding: 0 65px;
-  gap: 40px;
+  gap: 100px;
 }
 
 /* ── Hero text ── */
@@ -218,16 +218,23 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   gap: 16px;
+}
+
+:lang(pt) .hero__text {
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hero__line {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 88px;
-  letter-spacing: -2.64px;
+  font-size: 64px;
+  letter-spacing: -2px;
   line-height: 1;
   color: var(--text-dim);
+  white-space: nowrap;
 }
 
 .hero__dim {
@@ -837,7 +844,7 @@ ul {
 @media (max-width: 1200px) {
   .section { width: 92%; }
 
-  .hero__line { font-size: 68px; letter-spacing: -2px; }
+  .hero__line { font-size: 52px; letter-spacing: -1.5px; }
 
   .heading--services,
   .heading--projects,
@@ -866,6 +873,7 @@ ul {
   .section--hero { height: auto; min-height: unset; padding-bottom: 48px; }
   .hero__body    { flex-direction: column; padding: 0 24px; gap: 0; }
   .hero__text    { flex: none; align-items: center; text-align: center; justify-content: flex-start; padding: 16px 0 0; }
+  :lang(pt) .hero__text { align-items: center; text-align: center; }
   .hero__line    { font-size: 56px; letter-spacing: -1.5px; }
   .hero__cta     { align-self: center; }
   .hero__3d      { display: block; height: 340px; width: 100%; flex: none; }
@@ -932,7 +940,11 @@ ul {
     transform: none;
     width: 100%;
     font-size: 18px;
-    text-align: left;
+    text-align: center;
+  }
+  .service-card {
+    text-align: center;
+    align-items: center;
   }
   .about__bio--p1,
   .about__bio--p2 { top: auto; }
@@ -980,7 +992,7 @@ ul {
   /* ── Hero ── */
   .hero__body { padding: 0 16px; }
   .hero__3d   { height: 280px; }
-  .hero__line { font-size: 42px; letter-spacing: -1px; }
+  .hero__line { font-size: 34px; letter-spacing: -0.8px; }
 
   /* ── Shared headings ── */
   .heading--services,
@@ -1017,7 +1029,8 @@ ul {
   /* ── About ── */
   .section--about { padding: 40px 20px 48px; }
   .about__card    { padding: 24px; }
-  .about__bio     { font-size: 15px; }
+  .about__bio     { font-size: 15px; text-align: center; }
+  .service-card   { text-align: center; align-items: center; }
 
   /* ── CTA ── */
   .section--cta { padding: 60px 20px; gap: 28px; }
